@@ -2,9 +2,8 @@
 <html>
 <head>
     <meta name="layout" content="main" />
-    <g:set var="entityName" value="${message(code: 'hotel.label', default: 'Hotel')}" />
     <asset:stylesheet src="search.css"/>
-    <title><g:message code="default.list.label" args="[entityName]" /></title>
+    <title>Поиск отелей</title>
 </head>
 <body>
 <div class="nav" role="navigation">
@@ -32,7 +31,7 @@
             <div class="message" role="status">${flash.message}</div>
         </g:if>
         <g:if test="${hotelCount == 0}">
-            <div class="centered mt-5" class="not-found">
+            <div class="centered mt-5 not-found">
                 <h2>Отели не найдены.</h2>
             </div>
 

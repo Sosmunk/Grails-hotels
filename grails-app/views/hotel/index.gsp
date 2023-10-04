@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'hotel.label', default: 'Hotel')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Справочник отелей</title>
     </head>
     <body>
         <a href="#list-hotel" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
