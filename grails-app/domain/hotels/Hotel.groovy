@@ -8,8 +8,9 @@ class Hotel {
     static belongsTo = [country: Country]
 
     static constraints = {
-        name(nullable: false, blank: false, maxSize: 255)
-        stars( nullable: false, min: 1, max: 5)
+        name(nullable: false, blank: false, maxSize: 255, unique: ['country'])
+        stars(nullable: false, min: 1, max: 5)
         website(nullable: true, url: true)
+
     }
 }

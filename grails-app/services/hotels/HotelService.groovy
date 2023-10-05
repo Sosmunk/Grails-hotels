@@ -24,7 +24,8 @@ abstract class HotelService implements IHotelService {
     @Override
     List<Hotel> listByHotelNameAndCountryName(String hotelName, Long countryId, Map params) {
         def criteria = Hotel.createCriteria()
-        def hotelList = criteria.list(params) {
+        def hotelList = criteria.list(max: params.max, offset: params.offset, sort: "name", order: "asc") {
+
             ilike("name", "%${hotelName}%")
             and {
                 if (countryId){
@@ -33,10 +34,9 @@ abstract class HotelService implements IHotelService {
                     }
                 }
             }
-            and {
-                order("stars", "desc")
-                order("name", "asc")
-            }
+
+            order("stars", "desc")
+
         }
         return hotelList
     }

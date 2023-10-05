@@ -29,7 +29,7 @@
             <g:form resource="${this.country}" method="PUT">
                 <g:hiddenField name="version" value="${this.country?.version}" />
                 <fieldset class="form">
-                    <f:all bean="country"/>
+                    <f:all bean="country" except="hotels"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />

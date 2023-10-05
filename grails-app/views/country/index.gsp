@@ -29,7 +29,7 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${countryList}" template="table_index"/>
+            <f:table collection="${countryList}" template="table_index" except="hotels, id"/>
             <g:if test="${countryCount == 0}">
                 <h2>Ничего не найдено.</h2>
             </g:if>
